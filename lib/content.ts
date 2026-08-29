@@ -1,69 +1,67 @@
-import { z } from "zod";
+import { readFileSync } from "fs";
+import { join } from "path";
 
-const metin = z.string().max(5000);
+export interface SiteContent {
+  site: {
+    name: string;
+    title: string;
+    email: string;
+    phone: string;
+    address: string;
+    copyright: string;
+  };
+  home: {
+    badge: string;
+    headline: string;
+    headlineAccent: string;
+    headlineSuffix: string;
+    description: string;
+    cta: string;
+    cardTitle: string;
+    cardSubtitle: string;
+    quote: string;
+    quoteAuthor: string;
+  };
+  services: {
+    title: string;
+    desc: string;
+    duration: string;
+    method: string;
+  }[];
+  metrics: { val: string; label: string }[];
+  about: {
+    title: string;
+    intro: string;
+    credentials: { year: string; title: string; detail: string }[];
+  };
+  approach: {
+    title: string;
+    intro: string;
+    principles: { title: string; desc: string }[];
+  };
+  articles: {
+    title: string;
+    category: string;
+    readTime: string;
+    date: string;
+  }[];
+  faq: { q: string; a: string }[];
+  contact: {
+    title: string;
+    intro: string;
+    formName: string;
+    formEmail: string;
+    formMessage: string;
+    formSubmit: string;
+  };
+}
 
-const madde = z.object({
-  title: metin.optional(),
-  description: metin.optional(),
-  meta: metin.optional(),
-});
+let cached: SiteContent | null = null;
 
-export const siteContentSchema = z.object({
-  practitioner: z
-    .object({
-      name: metin.optional(),
-      title: metin.optional(),
-      city: metin.optional(),
-      email: z.string().email().optional(),
-      phone: metin.optional(),
-      bookingUrl: z.string().url().optional(),
-    })
-    .optional(),
-
-  home: z
-    .object({
-      headline: metin.optional(),
-      highlight: metin.optional(),
-      intro: metin.optional(),
-      ctaLabel: metin.optional(),
-    })
-    .optional(),
-
-  about: z
-    .object({
-      heading: metin.optional(),
-      body: z.array(metin).optional(),
-    })
-    .optional(),
-
-  services: z
-    .object({ heading: metin.optional(), intro: metin.optional(), items: z.array(madde).optional() })
-    .optional(),
-
-  approach: z
-    .object({ heading: metin.optional(), intro: metin.optional(), items: z.array(madde).optional() })
-    .optional(),
-
-  articles: z
-    .object({
-      heading: metin.optional(),
-      intro: metin.optional(),
-      items: z
-        .array(madde.extend({ url: z.string().url().optional() }))
-        .optional(),
-    })
-    .optional(),
-
-  faq: z
-    .object({
-      heading: metin.optional(),
-      items: z.array(z.object({ q: metin, a: metin })).optional(),
-    })
-    .optional(),
-
-  contact: z
-    .object({ heading: metin.optional(), intro: metin.optional(), address: metin.optional() })
-    .optional(),
-});
-
-export type SiteContent = z.infer<typeof siteContentSchema>;
+export function getContent(): SiteContent {
+  if (cached) return cached;
+  const filePath = join(process.cwd(), "content", "site.json");
+  const raw = readFileSync(filePath, "utf-8");
+  cached = JSON.parse(raw) as SiteContent;
+  return cached;
+}

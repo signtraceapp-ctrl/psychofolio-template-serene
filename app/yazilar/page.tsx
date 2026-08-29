@@ -1,38 +1,31 @@
+import { getContent } from "@/lib/content";
 import type { Metadata } from "next";
-import Link from "next/link";
-import { content } from "@/lib/merge";
-import { Sayfa } from "../_parts";
 
 export const metadata: Metadata = { title: "Yazilar" };
 
-export default function Yazilar() {
-  const { articles } = content;
+export default function ArticlesPage() {
+  const c = getContent();
   return (
-    <Sayfa baslik={articles.heading} giris={articles.intro}>
-      {articles.items.length === 0 ? (
-        <p className="rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-soft)] p-6 text-[var(--color-fg-muted)]">
-          Henuz yayinlanmis bir yazi yok.
-        </p>
-      ) : (
-        <ul className="space-y-8">
-          {articles.items.map((y, i) => (
-            <li key={i}>
-              <h2 className="font-[family-name:var(--font-display)] text-xl">
-                {y.url ? (
-                  <Link href={y.url} className="transition-colors hover:text-[var(--color-primary)]">
-                    {y.title}
-                  </Link>
-                ) : (
-                  y.title
-                )}
-              </h2>
-              {y.description && (
-                <p className="mt-2 leading-relaxed text-[var(--color-fg-muted)]">{y.description}</p>
-              )}
-            </li>
-          ))}
-        </ul>
-      )}
-    </Sayfa>
+    <div className="font-sans bg-bg text-fg">
+      <section className="py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl space-y-12">
+            <h1 className="font-display text-4xl font-light text-center tracking-tight text-fg">Makaleler</h1>
+            <div className="divide-y divide-primary/10">
+              {c.articles.map((a, i) => (
+                <div key={i} className="py-8 space-y-3 group cursor-pointer hover:translate-x-[5px] transition-transform duration-200">
+                  <div className="flex items-center gap-3">
+                    <span className="text-[10px] tracking-[0.15em] uppercase text-primary/60 font-semibold">{a.category}</span>
+                    <span className="text-[10px] text-fg-muted">{a.readTime}</span>
+                  </div>
+                  <h2 className="font-display text-xl font-light text-fg group-hover:text-primary transition-colors">{a.title}</h2>
+                  <p className="text-xs text-fg-muted">{a.date}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }

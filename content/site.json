@@ -1,0 +1,84 @@
+{
+  "site": {
+    "name": "Uzman Psikolog",
+    "title": "Klinik Psikolog",
+    "email": "iletisim@psikolog.com",
+    "phone": "+90 5XX XXX XX XX",
+    "address": "Istanbul, Turkiye",
+    "copyright": "Tum haklari saklidir."
+  },
+  "home": {
+    "badge": "SERENE",
+    "headline": "Zihnin sessizliginde,",
+    "headlineAccent": "kendi yolunuzu",
+    "headlineSuffix": "bulun.",
+    "description": "Guvene dayali, yavas ve derinlemesine calisan bir terapi yaklasimi ile icsel dengenizi yeniden insa edin.",
+    "cta": "Randevu Talep Et",
+    "cardTitle": "Sakinlik & Denge",
+    "cardSubtitle": "BUTUNSEL TERAPI YAKLASIMI",
+    "quote": "Disari bakan ruya gorur, iceri bakan uyanir.",
+    "quoteAuthor": "Carl Gustav Jung"
+  },
+  "services": [
+    {
+      "title": "Bireysel Psikoterapi",
+      "desc": "Kaygi, depresyon, stres ve iliskisel zorluklarda bilimsel temelli, birebir terapi sureci.",
+      "duration": "50 dk",
+      "method": "Yuzyuze / Online"
+    },
+    {
+      "title": "Cift & Iliski Terapisi",
+      "desc": "Iletisim sorunlari, cift catismalari ve duygusal kopukluk icin yapilandirilmis terapi.",
+      "duration": "75 dk",
+      "method": "Yuzyuze"
+    },
+    {
+      "title": "EMDR Travma Terapisi",
+      "desc": "Travma sonrasi stres, fobiler ve olumsuz yasam deneyimlerinin islenmesi icin EMDR protokolu.",
+      "duration": "60 dk",
+      "method": "Yuzyuze / Online"
+    }
+  ],
+  "metrics": [
+    { "val": "12+", "label": "Yil Klinik Deneyim" },
+    { "val": "4500+", "label": "Tamamlanan Seans" },
+    { "val": "8", "label": "Akademik Yayin" },
+    { "val": "%100", "label": "Etik Baglilik" }
+  ],
+  "about": {
+    "title": "Hakkimda",
+    "intro": "Klinik psikoloji alaninda 12 yili askin deneyimimle, danisanlarimin icsel gucluklerini kesfetmelerine ve yasam kalitelerini artirmalarina eslik ediyorum.",
+    "credentials": [
+      { "year": "2014", "title": "Istanbul Universitesi Psikoloji", "detail": "Yuksek onur derecesiyle mezuniyet" },
+      { "year": "2016", "title": "Klinik Psikoloji Yuksek Lisans", "detail": "Bilissel davranisci terapi uzmanligi" },
+      { "year": "2018", "title": "EMDR Europe Akredite Uygulayici", "detail": "Travma odakli terapi yetkinligi" }
+    ]
+  },
+  "approach": {
+    "title": "Terapi Yaklasimim",
+    "intro": "Her birey benzersizdir. Terapide tek bir dogru yol yoktur; onemli olan guvenli bir alanda, sizin icin anlamli olan degisimi birlikte kesfetmektir.",
+    "principles": [
+      { "title": "Guvenli Alan", "desc": "Yargilamadan dinleme, kosulsuz kabul ve gizlilik ilkeleriyle guvenli bir terapi ortami." },
+      { "title": "Kisiye Ozel Surec", "desc": "Standart receteler yerine, sizin ihtiyaclariniza ve hedefinize ozel tasarlanmis bir terapi plani." },
+      { "title": "Aktif Is Birligi", "desc": "Terapi, birlikte yurudugunuz bir yoldur. Seanslarda aktif katilim ve ev odevileri surecin ayrilmaz parcasidir." }
+    ]
+  },
+  "articles": [
+    { "title": "Kaygi Bozukluklarinda Bilissel Yeniden Yapilandirma", "category": "Kaygi", "readTime": "8 dk", "date": "28 Mayis 2026" },
+    { "title": "Cocuklarda Duygusal Guvenlik Alani", "category": "Cocuk", "readTime": "6 dk", "date": "24 Temmuz 2026" },
+    { "title": "EMDR ile Travma Sonrasi Buyume", "category": "Travma", "readTime": "10 dk", "date": "10 Nisan 2026" }
+  ],
+  "faq": [
+    { "q": "Ilk terapi seansinda ne yapiliyor?", "a": "Ilk seans, birbirimizi tanidigimiz, basvuru nedenlerinizi ve hedeflerinizi degerlendirdigimiz bir on degerlendirme seansidir." },
+    { "q": "Terapi seanslari ne siklikla yapilmali?", "a": "Baslangicta haftada bir gorusme onerilir. Surec ilerledikce siklik azaltilabilir." },
+    { "q": "Seanslarin gizliligi nasil korunur?", "a": "Tum seanslarimiz yasal ve etik sinirlar cercevesinde %100 gizlilik ilkesine dayanir." }
+  ],
+  "contact": {
+    "title": "Randevu ve Iletisim",
+    "intro": "Terapi surecine baslamak veya sorulariniz icin benimle iletisime gecebilirsiniz.",
+    "formName": "Adiniz",
+    "formEmail": "E-posta",
+    "formMessage": "Mesajiniz",
+    "formSubmit": "Gonder"
+  }
+}

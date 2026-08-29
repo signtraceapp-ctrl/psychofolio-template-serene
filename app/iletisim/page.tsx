@@ -1,41 +1,68 @@
+import { getContent } from "@/lib/content";
+import { Mail, MapPin } from "lucide-react";
 import type { Metadata } from "next";
-import { content } from "@/lib/merge";
-import { Sayfa, RandevuButonu } from "../_parts";
 
 export const metadata: Metadata = { title: "Iletisim" };
 
-export default function Iletisim() {
-  const { contact, practitioner } = content;
-  const kanallar = [
-    practitioner.email && { etiket: "E-posta", deger: practitioner.email, href: `mailto:${practitioner.email}` },
-    practitioner.phone && { etiket: "Telefon", deger: practitioner.phone, href: `tel:${practitioner.phone.replace(/\s/g, "")}` },
-    contact.address && { etiket: "Adres", deger: contact.address },
-    practitioner.city && !contact.address && { etiket: "Konum", deger: practitioner.city },
-  ].filter(Boolean) as { etiket: string; deger: string; href?: string }[];
-
+export default function ContactPage() {
+  const c = getContent();
   return (
-    <Sayfa baslik={contact.heading} giris={contact.intro}>
-      {kanallar.length > 0 && (
-        <dl className="space-y-4">
-          {kanallar.map((k) => (
-            <div key={k.etiket} className="flex flex-wrap gap-x-4">
-              <dt className="w-24 shrink-0 text-sm text-[var(--color-fg-muted)]">{k.etiket}</dt>
-              <dd>
-                {k.href ? (
-                  <a href={k.href} className="text-[var(--color-primary)] hover:underline">
-                    {k.deger}
-                  </a>
-                ) : (
-                  k.deger
-                )}
-              </dd>
+    <div className="font-sans bg-bg text-fg">
+      <section className="py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl space-y-16">
+            <h1 className="font-display text-4xl font-light text-center tracking-tight text-fg">{c.contact.title}</h1>
+            <p className="text-center text-fg-muted font-light leading-relaxed">
+              {c.contact.intro}
+            </p>
+
+            {/* Contact info */}
+            <div className="flex flex-wrap justify-center gap-8 text-sm text-fg-muted">
+              <div className="flex items-center gap-2">
+                <Mail className="h-4 w-4 text-primary/60" />
+                <span>{c.site.email}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <MapPin className="h-4 w-4 text-primary/60" />
+                <span>{c.site.address}</span>
+              </div>
             </div>
-          ))}
-        </dl>
-      )}
-      <div className="mt-10">
-        <RandevuButonu etiket="Randevu talebi" />
-      </div>
-    </Sayfa>
+
+            {/* Contact Form */}
+            <form className="mx-auto max-w-md space-y-8">
+              <div>
+                <input
+                  type="text"
+                  placeholder={c.contact.formName}
+                  className="w-full border-b border-primary/20 bg-transparent py-3 text-sm text-fg placeholder:text-fg-muted/50 focus:border-primary focus:outline-none transition-colors"
+                />
+              </div>
+              <div>
+                <input
+                  type="email"
+                  placeholder={c.contact.formEmail}
+                  className="w-full border-b border-primary/20 bg-transparent py-3 text-sm text-fg placeholder:text-fg-muted/50 focus:border-primary focus:outline-none transition-colors"
+                />
+              </div>
+              <div>
+                <textarea
+                  rows={4}
+                  placeholder={c.contact.formMessage}
+                  className="w-full border-b border-primary/20 bg-transparent py-3 text-sm text-fg placeholder:text-fg-muted/50 focus:border-primary focus:outline-none transition-colors resize-none"
+                />
+              </div>
+              <div className="text-center">
+                <button
+                  type="submit"
+                  className="inline-flex items-center justify-center rounded-full px-10 py-3 text-sm font-medium shadow-sm transition-[transform,background-color] duration-300 hover:scale-[1.02] bg-primary text-primary-fg hover:bg-primary-hover"
+                >
+                  {c.contact.formSubmit}
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }

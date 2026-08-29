@@ -1,62 +1,73 @@
 import type { Metadata } from "next";
+import { Inter, Newsreader } from "next/font/google";
+import { getContent } from "@/lib/content";
 import Link from "next/link";
 import "./globals.css";
-import { content } from "@/lib/merge";
 
-const { practitioner } = content;
+const inter = Inter({
+  subsets: ["latin", "latin-ext"],
+  display: "swap",
+  variable: "--font-sans",
+});
 
-export const metadata: Metadata = {
-  title: {
-    default: `${practitioner.name} - ${practitioner.title}`,
-    template: `%s | ${practitioner.name}`,
-  },
-  description: content.home.intro,
-};
+const newsreader = Newsreader({
+  subsets: ["latin", "latin-ext"],
+  display: "swap",
+  variable: "--font-display",
+  style: ["normal", "italic"],
+});
 
-const SAYFALAR = [
-  { href: "/hakkimda", etiket: "Hakkimda" },
-  { href: "/hizmetler", etiket: "Hizmetler" },
-  { href: "/yaklasim", etiket: "Yaklasim" },
-  { href: "/yazilar", etiket: "Yazilar" },
-  { href: "/sss", etiket: "SSS" },
-  { href: "/iletisim", etiket: "Iletisim" },
+export function generateMetadata(): Metadata {
+  const c = getContent();
+  return {
+    title: { default: `${c.site.name} - ${c.site.title}`, template: `%s | ${c.site.name}` },
+    description: c.home.description,
+  };
+}
+
+const navLinks = [
+  { href: "/hakkimda", label: "Hakkimda" },
+  { href: "/hizmetler", label: "Hizmetler" },
+  { href: "/yaklasim", label: "Yaklasim" },
+  { href: "/yazilar", label: "Yazilar" },
+  { href: "/sss", label: "SSS" },
+  { href: "/iletisim", label: "Iletisim" },
 ];
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const c = getContent();
+
   return (
-    <html lang="tr">
-      <body className="flex min-h-screen flex-col">
-        <header className="border-b border-[var(--color-border)]">
-          <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-4 px-6 py-5">
-            <Link href="/" className="font-[family-name:var(--font-display)] text-lg text-[var(--color-fg)]">
-              {practitioner.name}
+    <html lang="tr" className={`${inter.variable} ${newsreader.variable}`}>
+      <body className="min-h-screen flex flex-col bg-bg text-fg antialiased">
+        {/* Header */}
+        <header className="sticky top-0 z-50 border-b border-primary/10 bg-bg/80 backdrop-blur-md">
+          <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+            <Link href="/" className="font-display text-xl font-semibold text-fg hover:text-primary transition-colors">
+              {c.site.name}
             </Link>
-            <nav>
-              <ul className="flex flex-wrap gap-x-5 gap-y-2 text-sm text-[var(--color-fg-muted)]">
-                {SAYFALAR.map((s) => (
-                  <li key={s.href}>
-                    <Link href={s.href} className="transition-colors hover:text-[var(--color-primary)]">
-                      {s.etiket}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+            <nav className="hidden md:flex items-center gap-8">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-sm text-fg-muted hover:text-primary transition-colors"
+                >
+                  {link.label}
+                </Link>
+              ))}
             </nav>
           </div>
         </header>
 
+        {/* Main */}
         <main className="flex-1">{children}</main>
 
-        <footer className="border-t border-[var(--color-border)]">
-          <div className="mx-auto max-w-5xl px-6 py-10 text-sm text-[var(--color-fg-muted)]">
-            <p>
-              {practitioner.name}
-              {practitioner.title ? ` - ${practitioner.title}` : ""}
-              {practitioner.city ? ` - ${practitioner.city}` : ""}
-            </p>
-            <p className="mt-2">
-              &copy; {new Date().getFullYear()} - Tum haklari saklidir.
-            </p>
+        {/* Footer */}
+        <footer className="border-t border-primary/10 bg-bg py-8">
+          <div className="mx-auto max-w-7xl px-4 text-center text-sm text-fg-muted sm:px-6 lg:px-8">
+            <p>{c.site.name} - {c.site.title}</p>
+            <p className="mt-1">&copy; {new Date().getFullYear()} - {c.site.copyright}</p>
           </div>
         </footer>
       </body>
