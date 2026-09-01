@@ -28,7 +28,7 @@ export function ContactClient({ content: c }: { content: SiteContent }) {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-xl space-y-16">
             <div data-reveal className="text-center space-y-4">
-              <p className="text-[10px] tracking-[0.3em] text-primary uppercase font-bold">Iletisim</p>
+              <p className="text-[10px] tracking-[0.3em] text-primary uppercase font-bold">İletişim</p>
               <h1 className="font-display text-4xl font-light text-fg tracking-tight">{c.contact.title}</h1>
               <div className="w-12 h-px bg-primary/30 mx-auto mt-6" />
             </div>
@@ -39,8 +39,8 @@ export function ContactClient({ content: c }: { content: SiteContent }) {
 
             <div data-reveal className="space-y-10">
               <div className="flex flex-wrap justify-center gap-8 text-xs text-fg-muted font-semibold tracking-wider uppercase">
-                <span className="flex items-center gap-2.5"><Mail className="h-4 w-4 text-primary/40" /> {c.site.email}</span>
-                <span className="flex items-center gap-2.5"><MapPin className="h-4 w-4 text-primary/40" /> {c.site.address}</span>
+                <span className="flex items-center gap-2.5"><Mail className="h-4.5 w-4.5 text-primary/40" /> {c.site.email}</span>
+                <span className="flex items-center gap-2.5"><MapPin className="h-4.5 w-4.5 text-primary/40" /> {c.site.address}</span>
               </div>
 
               <div className="space-y-8 max-w-md mx-auto">
@@ -72,7 +72,7 @@ export function ContactClient({ content: c }: { content: SiteContent }) {
                   </button>
                 </div>
                 <p className="text-center text-xs text-fg-muted/60 italic">
-                  Ornek sitede form calismaz. Satin aldiginizda kendi e-posta adresinize baglanir.
+                  Örnek sitede form çalışmaz. Satın aldığınızda kendi e-posta adresinize bağlanır.
                 </p>
               </div>
             </div>

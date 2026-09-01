@@ -1,10 +1,10 @@
 {
   "site": {
     "name": "Ad Soyad",
-    "title": "Unvan",
-    "email": "iletisim@siteniz.com",
-    "address": "Sehir, Turkiye",
-    "copyright": "Tum haklari saklidir."
+    "title": "Klinik Psikolog",
+    "email": "bilgi@klinik.com",
+    "address": "Nişantaşı, İstanbul",
+    "copyright": "Tüm hakları saklıdır."
   },
   "home": {
     "badge": "SERENE",
@@ -12,89 +12,96 @@
     "headlineAccent": "kendi yolunuzu",
     "headlineSuffix": "bulun.",
     "description": "Güvene dayalı, yavaş ve derinlemesine çalışan bir terapi yaklaşımı ile içsel dengenizi yeniden inşa edin.",
-    "cta": "İletişime Geçin",
+    "cta": "Randevu Talep Et",
     "cardTitle": "Sakinlik & Denge",
     "cardSubtitle": "Bütünsel Terapi Yaklaşımı",
     "quote": "Dışarı bakan rüya görür, içeri bakan uyanır.",
     "quoteAuthor": "Carl Gustav Jung"
   },
+  "metrics": [
+    { "val": "12+", "unit": "Yıl", "label": "Klinik Deneyim" },
+    { "val": "4500+", "unit": "", "label": "Tamamlanmış Seans" },
+    { "val": "8", "unit": "+", "label": "Akademik Yayın" },
+    { "val": "%100", "unit": "", "label": "Etik Taahhüt" }
+  ],
   "services": [
     {
       "title": "Bireysel Psikoterapi",
-      "desc": "Kaygı, depresyon, stres ve ilişkisel zorluklarda bilimsel temelli, birebir terapi süreci.",
+      "desc": "Stres, kaygı, depresyon, yaşam değişimleri ve anlam arayışında bireysel farkındalık yolculuğu.",
       "duration": "50 dk",
-      "method": "Yüzyüze / Çevrimiçi"
+      "method": "CBT / Şema Terapi"
     },
     {
-      "title": "Çift ve İlişki Terapisi",
-      "desc": "İletişim sorunları, çift çatışmaları ve duygusal kopukluk için yapılandırılmış terapi.",
+      "title": "Çift & İlişki Terapisi",
+      "desc": "İlişki içi çatışmalar, iletişim problemleri ve bağlılık krizleri üzerine çiftler arası iyileşme.",
       "duration": "75 dk",
-      "method": "Yüzyüze"
+      "method": "Gottman / Sistemik"
     },
     {
-      "title": "Travma Odaklı Terapi",
-      "desc": "Travma sonrası stres, fobiler ve olumsuz yaşam deneyimlerinin işlenmesi için kanıta dayalı yaklaşımlar.",
+      "title": "EMDR Travma Terapisi",
+      "desc": "Zorlayıcı geçmiş deneyimlerin nörolojik düzeyde duyarsızlaştırılıp yeniden işlenmesi.",
       "duration": "60 dk",
-      "method": "Yüzyüze / Çevrimiçi"
+      "method": "EMDR Protokolü"
     }
   ],
   "about": {
     "title": "Hakkımda",
-    "intro": "Klinik psikoloji alanında çalışmalarımı yürütüyorum. Danışanlarımın içsel güçlüklerini keşfetmelerine ve yaşam kalitelerini artırmalarına eşlik ediyorum.",
+    "intro": "Klinik psikoloji yolculuğum, insanın kendisiyle barışma arayışını anlama arzusuyla başladı. 10 yılı aşkın süredir danışanlarımla güvenli bir farkındalık alanında buluşuyorum.",
+    "introSecond": "Zihinsel düğümlerin şefkatli bir eşlik etme süreciyle çözülebileceğine inanıyorum.",
     "credentials": [
       {
-        "year": "—",
-        "title": "Lisans Eğitimi",
-        "detail": "Psikoloji alanında lisans derecesi"
+        "year": "2014",
+        "title": "İstanbul Üniversitesi - Psikoloji Lisans",
+        "detail": "Birincilik derecesiyle mezuniyet"
       },
       {
-        "year": "—",
-        "title": "Yüksek Lisans",
-        "detail": "Klinik psikoloji alanında uzmanlık"
+        "year": "2016",
+        "title": "Klinik Psikoloji Yüksek Lisansı",
+        "detail": "Kaygı bozuklukları tez çalışması"
       },
       {
-        "year": "—",
-        "title": "Süpervizyon ve Sürekli Eğitim",
-        "detail": "Kanıta dayalı terapi yaklaşımlarında sürekli gelişim"
+        "year": "2018",
+        "title": "EMDR Avrupa Akredite Uygulayıcı",
+        "detail": "EMDR Europe onaylı sertifika"
       }
     ]
   },
   "approach": {
     "title": "Terapi Yaklaşımım",
-    "intro": "Her birey benzersizdir. Terapide tek bir doğru yol yoktur; önemli olan güvenli bir alanda, sizin için anlamlı olan değişimi birlikte keşfetmektir.",
+    "intro": "Terapi, yaşamın karmaşası içinde durup kendimize bakabildiğimiz, sessiz ve yargısız bir tanıklık alanıdır.",
     "principles": [
       {
         "title": "Güvenli Alan",
-        "desc": "Yargılamadan dinleme, koşulsuz kabul ve gizlilik ilkeleriyle güvenli bir terapi ortamı."
+        "desc": "Tam gizliliğe ve şefkate dayalı bir terapötik alan."
       },
       {
         "title": "Kişiye Özel Süreç",
-        "desc": "Standart reçeteler yerine, sizin ihtiyaçlarınıza ve hedefinize özel tasarlanmış bir terapi planı."
+        "desc": "İhtiyaçlarınıza, hızınıza ve hedeflerinize özel planlama."
       },
       {
         "title": "Aktif İş Birliği",
-        "desc": "Terapi, birlikte yürüdüğünüz bir yoldur. Seanslarda aktif katılım sürecin ayrılmaz parçasıdır."
+        "desc": "İki uzmanın omuz omuza çalıştığı bir ortaklık."
       }
     ]
   },
   "articles": [
     {
-      "title": "Kaygı ile Başa Çıkmanın Bilişsel Yolları",
-      "category": "Kaygı",
+      "title": "Kaygı Bozukluklarında Bilişsel Yeniden Yapılandırma",
+      "category": "Klinik",
       "readTime": "8 dk",
-      "date": ""
+      "date": "28 Mayıs 2026"
     },
     {
       "title": "Çocuklarda Duygusal Güvenlik Alanı Oluşturmak",
-      "category": "Çocuk",
+      "category": "Çocuk-Ergen",
       "readTime": "6 dk",
-      "date": ""
+      "date": "24 Temmuz 2026"
     },
     {
-      "title": "Travma Sonrası Büyüme ve İyileşme Süreci",
+      "title": "EMDR ile Travma Sonrası Büyüme",
       "category": "Travma",
       "readTime": "10 dk",
-      "date": ""
+      "date": "10 Nisan 2026"
     }
   ],
   "faq": [
@@ -108,16 +115,12 @@
     },
     {
       "q": "Seansların gizliliği nasıl korunur?",
-      "a": "Tüm seanslarımız yasal ve etik sınırlar çerçevesinde gizlilik ilkesine dayanır."
-    },
-    {
-      "q": "Seans ücreti ne kadar?",
-      "a": "Seans bilgisi için iletişime geçin."
+      "a": "Tüm seanslarımız yasal ve etik sınırlar çerçevesinde %100 gizlilik ilkesine dayanır."
     }
   ],
   "contact": {
-    "title": "İletişim",
-    "intro": "Terapi sürecine başlamak veya sorularınız için benimle iletişime geçebilirsiniz.",
+    "title": "Randevu ve İletişim",
+    "intro": "İçsel yolculuğunuza adım atmak veya ön bilgi almak için bana yazabilirsiniz.",
     "formName": "Adınız",
     "formEmail": "E-posta",
     "formMessage": "Mesajınız",

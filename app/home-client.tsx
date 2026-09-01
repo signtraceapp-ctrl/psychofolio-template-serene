@@ -11,13 +11,6 @@ if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
 
-const metrics = [
-  { val: "12+", unit: "Yil", label: "Klinik Deneyim" },
-  { val: "4500+", unit: "", label: "Tamamlanmis Seans" },
-  { val: "8", unit: "+", label: "Akademik Yayin" },
-  { val: "%100", unit: "", label: "Etik Taahhut" },
-];
-
 export function HomeClient({ content: c }: { content: SiteContent }) {
   const scopeRef = useRef<HTMLDivElement>(null);
 
@@ -122,7 +115,7 @@ export function HomeClient({ content: c }: { content: SiteContent }) {
               <div className="overflow-hidden rounded-[24px] border border-primary/15 bg-bg p-3 shadow-xl">
                 <Image
                   src="/serene_hero.png"
-                  alt="Sakin terapi ortami"
+                  alt="Sakin terapi ortamı"
                   width={340}
                   height={453}
                   className="aspect-[3/4] w-full rounded-[18px] object-cover"
@@ -157,7 +150,7 @@ export function HomeClient({ content: c }: { content: SiteContent }) {
       <section className="py-24 bg-bg-secondary/30 border-y border-primary/5">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div data-services className="mx-auto max-w-3xl space-y-16">
-            <h2 data-reveal className="font-display text-3xl font-light text-center text-fg tracking-tight">Calisma Alanlari</h2>
+            <h2 data-reveal className="font-display text-3xl font-light text-center text-fg tracking-tight">Çalışma Alanları</h2>
             <div className="space-y-6">
               {c.services.map((s, i) => (
                 <div
@@ -183,7 +176,7 @@ export function HomeClient({ content: c }: { content: SiteContent }) {
       <section className="py-20 bg-bg">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div data-metrics className="flex flex-wrap justify-center gap-12 md:gap-24">
-            {metrics.map((m, i) => (
+            {c.metrics.map((m, i) => (
               <div key={i} data-metric className="text-center group">
                 <p className="font-display text-4xl font-light text-primary/90 transition-transform group-hover:scale-105 duration-300">{m.val}</p>
                 <p className="mt-2 text-[10px] tracking-[0.2em] uppercase text-fg-muted font-semibold">{m.label}</p>

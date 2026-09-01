@@ -45,7 +45,7 @@ export function ArticlesClient({ content: c }: { content: SiteContent }) {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-xl space-y-16">
             <div data-reveal className="text-center space-y-4">
-              <p className="text-[10px] tracking-[0.3em] text-primary uppercase font-bold">Yazilar</p>
+              <p className="text-[10px] tracking-[0.3em] text-primary uppercase font-bold">Yazılar</p>
               <h1 className="font-display text-4xl font-light text-fg tracking-tight">Makaleler</h1>
               <div className="w-12 h-px bg-primary/30 mx-auto mt-6" />
             </div>

@@ -48,13 +48,14 @@ export function AboutClient({ content: c }: { content: SiteContent }) {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-2xl space-y-16 text-center">
             <div data-reveal className="space-y-4">
-              <p className="text-[10px] tracking-[0.3em] text-primary uppercase font-bold">Ozgecmis</p>
+              <p className="text-[10px] tracking-[0.3em] text-primary uppercase font-bold">Özgeçmiş</p>
               <h1 className="font-display text-4xl font-light text-fg tracking-tight">{c.about.title}</h1>
               <div className="w-12 h-px bg-primary/30 mx-auto mt-6" />
             </div>
 
             <div data-reveal className="space-y-8 text-base font-light leading-[1.9] text-fg-muted/80 italic">
               <p>{c.about.intro}</p>
+              {c.about.introSecond && <p>{c.about.introSecond}</p>}
             </div>
 
             {/* Vertical timeline */}

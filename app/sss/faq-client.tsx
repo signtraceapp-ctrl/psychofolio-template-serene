@@ -46,7 +46,7 @@ export function FaqClient({ content: c }: { content: SiteContent }) {
           <div className="mx-auto max-w-xl space-y-16">
             <div data-reveal className="text-center space-y-4">
               <p className="text-[10px] tracking-[0.3em] text-primary uppercase font-bold">Merak Edilenler</p>
-              <h1 className="font-display text-4xl font-light text-fg tracking-tight">Sik Sorulan Sorular</h1>
+              <h1 className="font-display text-4xl font-light text-fg tracking-tight">Sık Sorulan Sorular</h1>
               <div className="w-12 h-px bg-primary/30 mx-auto mt-6" />
             </div>
 

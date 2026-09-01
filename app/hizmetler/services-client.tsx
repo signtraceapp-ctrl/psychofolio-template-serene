@@ -45,7 +45,7 @@ export function ServicesClient({ content: c }: { content: SiteContent }) {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-xl space-y-16">
             <div data-reveal className="text-center space-y-4">
-              <p className="text-[10px] tracking-[0.3em] text-primary uppercase font-bold">Hizmet Alanlari</p>
+              <p className="text-[10px] tracking-[0.3em] text-primary uppercase font-bold">Hizmet Alanları</p>
               <h1 className="font-display text-4xl font-light text-fg tracking-tight">Terapi Hizmetleri</h1>
               <div className="w-12 h-px bg-primary/30 mx-auto mt-6" />
             </div>

@@ -21,6 +21,11 @@ export interface SiteContent {
     quote: string;
     quoteAuthor: string;
   };
+  metrics: {
+    val: string;
+    unit: string;
+    label: string;
+  }[];
   services: {
     title: string;
     desc: string;
@@ -30,6 +35,7 @@ export interface SiteContent {
   about: {
     title: string;
     intro: string;
+    introSecond?: string;
     credentials: { year: string; title: string; detail: string }[];
   };
   approach: {
