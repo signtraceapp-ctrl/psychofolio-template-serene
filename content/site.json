@@ -1,84 +1,126 @@
 {
   "site": {
-    "name": "Uzman Psikolog",
-    "title": "Klinik Psikolog",
-    "email": "iletisim@psikolog.com",
-    "phone": "+90 5XX XXX XX XX",
-    "address": "Istanbul, Turkiye",
+    "name": "Ad Soyad",
+    "title": "Unvan",
+    "email": "iletisim@siteniz.com",
+    "address": "Sehir, Turkiye",
     "copyright": "Tum haklari saklidir."
   },
   "home": {
     "badge": "SERENE",
-    "headline": "Zihnin sessizliginde,",
+    "headline": "Zihnin sessizliğinde,",
     "headlineAccent": "kendi yolunuzu",
     "headlineSuffix": "bulun.",
-    "description": "Guvene dayali, yavas ve derinlemesine calisan bir terapi yaklasimi ile icsel dengenizi yeniden insa edin.",
-    "cta": "Randevu Talep Et",
+    "description": "Güvene dayalı, yavaş ve derinlemesine çalışan bir terapi yaklaşımı ile içsel dengenizi yeniden inşa edin.",
+    "cta": "İletişime Geçin",
     "cardTitle": "Sakinlik & Denge",
-    "cardSubtitle": "BUTUNSEL TERAPI YAKLASIMI",
-    "quote": "Disari bakan ruya gorur, iceri bakan uyanir.",
+    "cardSubtitle": "Bütünsel Terapi Yaklaşımı",
+    "quote": "Dışarı bakan rüya görür, içeri bakan uyanır.",
     "quoteAuthor": "Carl Gustav Jung"
   },
   "services": [
     {
       "title": "Bireysel Psikoterapi",
-      "desc": "Kaygi, depresyon, stres ve iliskisel zorluklarda bilimsel temelli, birebir terapi sureci.",
+      "desc": "Kaygı, depresyon, stres ve ilişkisel zorluklarda bilimsel temelli, birebir terapi süreci.",
       "duration": "50 dk",
-      "method": "Yuzyuze / Online"
+      "method": "Yüzyüze / Çevrimiçi"
     },
     {
-      "title": "Cift & Iliski Terapisi",
-      "desc": "Iletisim sorunlari, cift catismalari ve duygusal kopukluk icin yapilandirilmis terapi.",
+      "title": "Çift ve İlişki Terapisi",
+      "desc": "İletişim sorunları, çift çatışmaları ve duygusal kopukluk için yapılandırılmış terapi.",
       "duration": "75 dk",
-      "method": "Yuzyuze"
+      "method": "Yüzyüze"
     },
     {
-      "title": "EMDR Travma Terapisi",
-      "desc": "Travma sonrasi stres, fobiler ve olumsuz yasam deneyimlerinin islenmesi icin EMDR protokolu.",
+      "title": "Travma Odaklı Terapi",
+      "desc": "Travma sonrası stres, fobiler ve olumsuz yaşam deneyimlerinin işlenmesi için kanıta dayalı yaklaşımlar.",
       "duration": "60 dk",
-      "method": "Yuzyuze / Online"
+      "method": "Yüzyüze / Çevrimiçi"
     }
   ],
-  "metrics": [
-    { "val": "12+", "label": "Yil Klinik Deneyim" },
-    { "val": "4500+", "label": "Tamamlanan Seans" },
-    { "val": "8", "label": "Akademik Yayin" },
-    { "val": "%100", "label": "Etik Baglilik" }
-  ],
   "about": {
-    "title": "Hakkimda",
-    "intro": "Klinik psikoloji alaninda 12 yili askin deneyimimle, danisanlarimin icsel gucluklerini kesfetmelerine ve yasam kalitelerini artirmalarina eslik ediyorum.",
+    "title": "Hakkımda",
+    "intro": "Klinik psikoloji alanında çalışmalarımı yürütüyorum. Danışanlarımın içsel güçlüklerini keşfetmelerine ve yaşam kalitelerini artırmalarına eşlik ediyorum.",
     "credentials": [
-      { "year": "2014", "title": "Istanbul Universitesi Psikoloji", "detail": "Yuksek onur derecesiyle mezuniyet" },
-      { "year": "2016", "title": "Klinik Psikoloji Yuksek Lisans", "detail": "Bilissel davranisci terapi uzmanligi" },
-      { "year": "2018", "title": "EMDR Europe Akredite Uygulayici", "detail": "Travma odakli terapi yetkinligi" }
+      {
+        "year": "—",
+        "title": "Lisans Eğitimi",
+        "detail": "Psikoloji alanında lisans derecesi"
+      },
+      {
+        "year": "—",
+        "title": "Yüksek Lisans",
+        "detail": "Klinik psikoloji alanında uzmanlık"
+      },
+      {
+        "year": "—",
+        "title": "Süpervizyon ve Sürekli Eğitim",
+        "detail": "Kanıta dayalı terapi yaklaşımlarında sürekli gelişim"
+      }
     ]
   },
   "approach": {
-    "title": "Terapi Yaklasimim",
-    "intro": "Her birey benzersizdir. Terapide tek bir dogru yol yoktur; onemli olan guvenli bir alanda, sizin icin anlamli olan degisimi birlikte kesfetmektir.",
+    "title": "Terapi Yaklaşımım",
+    "intro": "Her birey benzersizdir. Terapide tek bir doğru yol yoktur; önemli olan güvenli bir alanda, sizin için anlamlı olan değişimi birlikte keşfetmektir.",
     "principles": [
-      { "title": "Guvenli Alan", "desc": "Yargilamadan dinleme, kosulsuz kabul ve gizlilik ilkeleriyle guvenli bir terapi ortami." },
-      { "title": "Kisiye Ozel Surec", "desc": "Standart receteler yerine, sizin ihtiyaclariniza ve hedefinize ozel tasarlanmis bir terapi plani." },
-      { "title": "Aktif Is Birligi", "desc": "Terapi, birlikte yurudugunuz bir yoldur. Seanslarda aktif katilim ve ev odevileri surecin ayrilmaz parcasidir." }
+      {
+        "title": "Güvenli Alan",
+        "desc": "Yargılamadan dinleme, koşulsuz kabul ve gizlilik ilkeleriyle güvenli bir terapi ortamı."
+      },
+      {
+        "title": "Kişiye Özel Süreç",
+        "desc": "Standart reçeteler yerine, sizin ihtiyaçlarınıza ve hedefinize özel tasarlanmış bir terapi planı."
+      },
+      {
+        "title": "Aktif İş Birliği",
+        "desc": "Terapi, birlikte yürüdüğünüz bir yoldur. Seanslarda aktif katılım sürecin ayrılmaz parçasıdır."
+      }
     ]
   },
   "articles": [
-    { "title": "Kaygi Bozukluklarinda Bilissel Yeniden Yapilandirma", "category": "Kaygi", "readTime": "8 dk", "date": "28 Mayis 2026" },
-    { "title": "Cocuklarda Duygusal Guvenlik Alani", "category": "Cocuk", "readTime": "6 dk", "date": "24 Temmuz 2026" },
-    { "title": "EMDR ile Travma Sonrasi Buyume", "category": "Travma", "readTime": "10 dk", "date": "10 Nisan 2026" }
+    {
+      "title": "Kaygı ile Başa Çıkmanın Bilişsel Yolları",
+      "category": "Kaygı",
+      "readTime": "8 dk",
+      "date": ""
+    },
+    {
+      "title": "Çocuklarda Duygusal Güvenlik Alanı Oluşturmak",
+      "category": "Çocuk",
+      "readTime": "6 dk",
+      "date": ""
+    },
+    {
+      "title": "Travma Sonrası Büyüme ve İyileşme Süreci",
+      "category": "Travma",
+      "readTime": "10 dk",
+      "date": ""
+    }
   ],
   "faq": [
-    { "q": "Ilk terapi seansinda ne yapiliyor?", "a": "Ilk seans, birbirimizi tanidigimiz, basvuru nedenlerinizi ve hedeflerinizi degerlendirdigimiz bir on degerlendirme seansidir." },
-    { "q": "Terapi seanslari ne siklikla yapilmali?", "a": "Baslangicta haftada bir gorusme onerilir. Surec ilerledikce siklik azaltilabilir." },
-    { "q": "Seanslarin gizliligi nasil korunur?", "a": "Tum seanslarimiz yasal ve etik sinirlar cercevesinde %100 gizlilik ilkesine dayanir." }
+    {
+      "q": "İlk terapi seansında ne yapılıyor?",
+      "a": "İlk seans, birbirimizi tanıdığımız, başvuru nedenlerinizi ve hedeflerinizi değerlendirdiğimiz bir ön değerlendirme seansıdır."
+    },
+    {
+      "q": "Terapi seansları ne sıklıkla yapılmalı?",
+      "a": "Başlangıçta haftada bir görüşme önerilir. Süreç ilerledikçe sıklık azaltılabilir."
+    },
+    {
+      "q": "Seansların gizliliği nasıl korunur?",
+      "a": "Tüm seanslarımız yasal ve etik sınırlar çerçevesinde gizlilik ilkesine dayanır."
+    },
+    {
+      "q": "Seans ücreti ne kadar?",
+      "a": "Seans bilgisi için iletişime geçin."
+    }
   ],
   "contact": {
-    "title": "Randevu ve Iletisim",
-    "intro": "Terapi surecine baslamak veya sorulariniz icin benimle iletisime gecebilirsiniz.",
-    "formName": "Adiniz",
+    "title": "İletişim",
+    "intro": "Terapi sürecine başlamak veya sorularınız için benimle iletişime geçebilirsiniz.",
+    "formName": "Adınız",
     "formEmail": "E-posta",
-    "formMessage": "Mesajiniz",
-    "formSubmit": "Gonder"
+    "formMessage": "Mesajınız",
+    "formSubmit": "Gönder"
   }
 }
