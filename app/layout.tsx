@@ -22,6 +22,7 @@ export function generateMetadata(): Metadata {
   return {
     title: { default: `${c.site.name} - ${c.site.title}`, template: `%s | ${c.site.name}` },
     description: c.home.description,
+    robots: { index: true, follow: true },
   };
 }
 
