@@ -1,12 +1,25 @@
 "use client";
 
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { Mail, MapPin } from "lucide-react";
 import type { SiteContent } from "@/lib/content";
 
 export function ContactClient({ content: c }: { content: SiteContent }) {
   const scopeRef = useRef<HTMLDivElement>(null);
+  const [sent, setSent] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const ad = (form.elements.namedItem("ad") as HTMLInputElement)?.value ?? "";
+    const eposta = (form.elements.namedItem("eposta") as HTMLInputElement)?.value ?? "";
+    const mesaj = (form.elements.namedItem("mesaj") as HTMLTextAreaElement)?.value ?? "";
+    const subject = encodeURIComponent("İletişim Formu");
+    const body = encodeURIComponent(`Ad: ${ad}\nE-posta: ${eposta}\n\n${mesaj}`);
+    window.location.href = `mailto:${c.site.email}?subject=${subject}&body=${body}`;
+    setSent(true);
+  };
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -43,38 +56,59 @@ export function ContactClient({ content: c }: { content: SiteContent }) {
                 <span className="flex items-center gap-2.5"><MapPin className="h-4.5 w-4.5 text-primary/40" /> {c.site.address}</span>
               </div>
 
-              <div className="space-y-8 max-w-md mx-auto">
-                <input
-                  type="text"
-                  placeholder={c.contact.formName}
-                  disabled
-                  className="w-full bg-transparent border-b border-primary/20 py-3.5 text-sm focus:outline-none focus:border-primary font-light placeholder:text-fg-muted/40 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                />
-                <input
-                  type="email"
-                  placeholder={c.contact.formEmail}
-                  disabled
-                  className="w-full bg-transparent border-b border-primary/20 py-3.5 text-sm focus:outline-none focus:border-primary font-light placeholder:text-fg-muted/40 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                />
-                <textarea
-                  placeholder={c.contact.formMessage}
-                  rows={3}
-                  disabled
-                  className="w-full bg-transparent border-b border-primary/20 py-3.5 text-sm focus:outline-none focus:border-primary font-light resize-none placeholder:text-fg-muted/40 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                />
-                <div className="text-center pt-6">
+              {sent ? (
+                <div className="max-w-md mx-auto text-center space-y-4 py-8">
+                  <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-primary/10 text-primary mb-2">
+                    <Mail className="h-6 w-6" />
+                  </div>
+                  <h3 className="text-lg font-light text-fg">Mesajiniz Hazirlandi</h3>
+                  <p className="text-sm text-fg-muted font-light">
+                    E-posta uygulamaniz acildi. Gonderdikten sonra en kisa surede donus yapilacaktir.
+                  </p>
                   <button
                     type="button"
-                    disabled
-                    className="inline-flex items-center justify-center rounded-full px-14 py-3 text-xs font-semibold tracking-widest uppercase shadow-sm bg-primary text-primary-fg opacity-50 cursor-not-allowed"
+                    onClick={() => setSent(false)}
+                    className="inline-flex items-center justify-center rounded-full px-10 py-2.5 text-xs font-semibold tracking-widest uppercase shadow-sm bg-primary text-primary-fg hover:opacity-90 transition-opacity"
                   >
-                    {c.contact.formSubmit}
+                    Yeni Mesaj
                   </button>
                 </div>
-                <p className="text-center text-xs text-fg-muted/60 italic">
-                  Örnek sitede form çalışmaz. Satın aldığınızda kendi e-posta adresinize bağlanır.
-                </p>
-              </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-8 max-w-md mx-auto">
+                  <input
+                    id="ad"
+                    name="ad"
+                    type="text"
+                    required
+                    placeholder={c.contact.formName}
+                    className="w-full bg-transparent border-b border-primary/20 py-3.5 text-sm focus:outline-none focus:border-primary font-light placeholder:text-fg-muted/40 transition-colors"
+                  />
+                  <input
+                    id="eposta"
+                    name="eposta"
+                    type="email"
+                    required
+                    placeholder={c.contact.formEmail}
+                    className="w-full bg-transparent border-b border-primary/20 py-3.5 text-sm focus:outline-none focus:border-primary font-light placeholder:text-fg-muted/40 transition-colors"
+                  />
+                  <textarea
+                    id="mesaj"
+                    name="mesaj"
+                    required
+                    placeholder={c.contact.formMessage}
+                    rows={3}
+                    className="w-full bg-transparent border-b border-primary/20 py-3.5 text-sm focus:outline-none focus:border-primary font-light resize-none placeholder:text-fg-muted/40 transition-colors"
+                  />
+                  <div className="text-center pt-6">
+                    <button
+                      type="submit"
+                      className="inline-flex items-center justify-center rounded-full px-14 py-3 text-xs font-semibold tracking-widest uppercase shadow-sm bg-primary text-primary-fg hover:opacity-90 transition-opacity"
+                    >
+                      {c.contact.formSubmit}
+                    </button>
+                  </div>
+                </form>
+              )}
             </div>
           </div>
         </div>
