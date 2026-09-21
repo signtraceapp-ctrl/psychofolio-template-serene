@@ -22,16 +22,16 @@ export function generateMetadata(): Metadata {
   return {
     title: { default: `${c.site.name} - ${c.site.title}`, template: `%s | ${c.site.name}` },
     description: c.home.description,
+    robots: { index: true, follow: true },
   };
 }
 
 const navLinks = [
-  { href: "/hakkimda", label: "Hakkimda" },
+  { href: "/hakkimda", label: "Hakkımda" },
   { href: "/hizmetler", label: "Hizmetler" },
-  { href: "/yaklasim", label: "Yaklasim" },
-  { href: "/yazilar", label: "Yazilar" },
+  { href: "/yaklasim", label: "Yaklaşım" },
   { href: "/sss", label: "SSS" },
-  { href: "/iletisim", label: "Iletisim" },
+  { href: "/iletisim", label: "İletişim" },
 ];
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

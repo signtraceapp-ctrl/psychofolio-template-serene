@@ -1,44 +1,45 @@
-# Serene - Psychofolio Web Sitesi Sablonu
+# Serene - Psychofolio Web Sitesi Şablonu
 
-Psikologlar icin minimal, sakin ve ferah bir web sitesi sablonu.
+Psikologlar için minimal, sakin ve ferah bir web sitesi şablonu.
 
-## Sitenizi duzenleme
+## İçerik düzenleme
 
-Tum metinler `content/content.json` dosyasindadir. Kod duzenlemeniz gerekmez.
+Tüm metinler `content/site.json` dosyasındadır. Kod düzenlemeniz gerekmez.
 
-```json
-{
-  "practitioner": {
-    "name": "Uzm. Psk. Ayse Yilmaz",
-    "title": "Klinik Psikolog",
-    "city": "Istanbul",
-    "email": "ayse@ornek.com",
-    "phone": "+90 555 123 45 67"
-  },
-  "home": {
-    "headline": "Kendinize alan acin,",
-    "highlight": "birlikte"
-  },
-  "about": {
-    "body": ["Ilk paragraf.", "Ikinci paragraf."]
-  }
-}
-```
+Alanların tam listesi için `lib/content.ts` dosyasına bakın.
 
-Yazmadiginiz her alan sablonun kendi metnine duser, bos kalmaz.
-Alanlarin tam listesi icin `lib/content.ts` dosyasina bakin.
+## Kendi sitenizi yayına alma
 
-## Yayina alma
+1. Bu repo'yu GitHub hesabınıza fork'layın
+2. `content/site.json` dosyasını kendi bilgilerinizle düzenleyin
+3. `public/serene_hero.png` görselini kendi görselinizle değiştirin
+4. Vercel'de "New Project" > GitHub repo'nuzu seçin > Deploy
+5. Otomatik olarak yayına alınır, SSL dahildir
 
-1. Bu repo'yu GitHub hesabiniza fork'layin
-2. Vercel'de "New Project" > GitHub repo'nuzu secin > Deploy
-3. Otomatik olarak yayina alinir, SSL dahildir
-
-## Yerelde calistirma
+## Yerelde çalıştırma
 
 ```bash
 npm install
 npm run dev
 ```
 
-Site `http://localhost:3000` adresinde acilir.
+Site `http://localhost:3000` adresinde açılır.
+
+## 7 Sayfa
+
+| Yol | Sayfa |
+|---|---|
+| `/` | Ana Sayfa |
+| `/hakkimda` | Hakkımda |
+| `/hizmetler` | Hizmetler |
+| `/yaklasim` | Yaklaşım |
+| `/yazilar` | Yazılar |
+| `/sss` | Sık Sorulan Sorular |
+| `/iletisim` | İletişim |
+
+## Teknoloji
+
+- Next.js 16 (App Router)
+- Tailwind CSS v4
+- Framer Motion
+- TypeScript
